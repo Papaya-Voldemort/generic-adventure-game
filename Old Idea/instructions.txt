@@ -1,0 +1,3 @@
+anything ending with "(py).txt":
+    remove that ending and replace it with .py and what is there should work like python code. 
+    i have just changed the names of these files in the Old Idea folder for debugging in the future!

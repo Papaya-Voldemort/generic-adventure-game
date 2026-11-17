@@ -1,12 +1,16 @@
 .
-├── __pycache__
-│   ├── main.cpython-315.pyc
-│   └── utils.cpython-315.pyc
-├── chess puzzle format.md
 ├── fileStructure.md
-├── main.py
-├── mechs.py
-├── project objectives.md
-└── utils.py
+├── newIdea.md
+└── Old Idea
+    ├── __pycache__
+    │   ├── main.cpython-315.pyc
+    │   └── utils.cpython-315.pyc
+    ├── chess puzzle format.md
+    ├── fileStructure.md
+    ├── instructions.txt
+    ├── main(py).txt
+    ├── mechs(py).txt
+    ├── project objectives.md
+    └── utils(py).txt
 
-2 directories, 8 files
+3 directories, 11 files
