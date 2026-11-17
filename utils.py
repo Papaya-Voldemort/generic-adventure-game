@@ -1,5 +1,6 @@
 import os
 import time
+import random
 
 def clrscreen():
     if os.name == "nt":
