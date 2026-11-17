@@ -1,4 +1,4 @@
-'''
+```
 1    [r] [n] [b] [k] [q] [b] [n] [r]
 2    [p] [p] [p] [p] [p] [p] [p] [p]
 3    [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
@@ -12,4 +12,4 @@ X     A   B   C   D   E   F   G   H
 
 
 ##the idea is for a boss fight where you have to enter the standard chess notation for the best optimal move for a puzzle
-'''
+```
