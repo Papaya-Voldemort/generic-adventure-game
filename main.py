@@ -47,7 +47,7 @@ def playGame():
     print("You will have to SSH into his computer and install GTA IV using the GameShore CLI")
     utils.wait()
     print("At least he plans on paying you quite well.")
-    terminal()
+    terminal(fname, "office1-desktop")
 
 
 utils.loading(loadBool)
