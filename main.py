@@ -1,10 +1,23 @@
 import utils
 import time
 import random
+import shell
 
 
 name = "tung tung tung sahur".title()
+fname = "brr brr patapim"
 loadBool = False
+
+def terminal(user,device):
+    utils.clrscreen()
+    print("welcome to msh!\nfor a list of commands, type help")
+    while True:
+        prompt = input(f"\[{user}@{device} {filesysloction}\]").strip()
+        if prompt == "help":
+            shell.help()
+        elif "man" == prompt.split(maxsplit=1)[0]:
+            print()
+            
 
 def playGame():
     print("Welcome to CorpNet IT Helpdesk")
@@ -17,6 +30,7 @@ def playGame():
         print("Invalid name. Please try again.")
         utils.wait(True)
         name = input("What is your name?\n:").strip().title()
+    fname = name.split(maxsplit=1)[0]
     utils.clrscreen()
     print(f"Hi {name}!")
     utils.wait(False, 7)
@@ -33,6 +47,7 @@ def playGame():
     print("You will have to SSH into his computer and install GTA IV using the GameShore CLI")
     utils.wait()
     print("At least he plans on paying you quite well.")
+    terminal()
 
 
 utils.loading(loadBool)

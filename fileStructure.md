@@ -1,8 +1,5 @@
 ```
 .
-├── fileStructure.md
-├── main.py
-├── newIdea.md
 ├── Old Idea
 │   ├── __pycache__
 │   │   ├── main.cpython-315.pyc
@@ -14,9 +11,16 @@
 │   ├── mechs(py).txt
 │   ├── project objectives.md
 │   └── utils(py).txt
+├── __pycache__
+│   ├── shell.cpython-315.pyc
+│   └── utils.cpython-315.pyc
+├── fileStructure.md
+├── main.py
+├── newIdea.md
 ├── refreshfilestructure.py
+├── shell.py
 └── utils.py
 
-3 directories, 14 files
+4 directories, 17 files
 
 ```
