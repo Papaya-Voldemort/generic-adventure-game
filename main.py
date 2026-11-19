@@ -2,25 +2,37 @@ import utils
 import time
 import random
 
-waitTime = 3.5
+
 name = "tung tung tung sahur".title()
 loadBool = False
 
 def playGame():
-    print("Welcome to gamename")
-    time.sleep(waitTime)
+    print("Welcome to CorpNet IT Helpdesk")
+    utils.wait()
     name = input("What is your name?\n:").strip().title()
     while name == "" or name.isnumeric():
         if name.isnumeric():
             print("Do your parents not love you?")
-            time.sleep(waitTime)
+            utils.wait()
         print("Invalid name. Please try again.")
-        time.sleep(waitTime)
-        utils.clrscreen()
+        utils.wait(True)
         name = input("What is your name?\n:").strip().title()
     utils.clrscreen()
     print(f"Hi {name}!")
-    time.sleep(waitTime * 2)
+    utils.wait(False, 7)
+    print("You have a VERY VERY important task today.")
+    utils.wait()
+    print("Today you must help Rocky download GTA IV")
+    utils.wait()
+    print("He plans to take all of the week of Thanksgiving off due to a *sudden* cold.")
+    print("( ͠° ͟ʖ ͡°)")
+    utils.wait()
+    print("However, your client is approxamatley 16.3 light years away on Erid and the only connection you have to his computer is a remote shell.")
+    utils.wait()
+    utils.wait(True)
+    print("You will have to SSH into his computer and install GTA IV using the GameShore CLI")
+    utils.wait()
+    print("At least he plans on paying you quite well.")
 
 
 utils.loading(loadBool)

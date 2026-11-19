@@ -1,13 +1,19 @@
 import os
 import time
 import random
-##from simple_term_menu import TerminalMenu
+
+
 
 def clrscreen():
     if os.name == "nt":
         os.system('cls')
     else:
         os.system("clear")
+
+def wait(clear=False,waitTime=3.5):
+    time.sleep(waitTime)
+    if clear == True:
+        clrscreen()
 
 def loading(loadtime=random.randint(1,15), enabled=True):
     if enabled == True:
