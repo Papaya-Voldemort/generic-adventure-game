@@ -17,6 +17,8 @@ def terminal(user,device):
         mcomm = lprompt[0]
         if prompt == "help":
             shell.help()
+        elif "ssh rocky@192.168.42.73" == prompt:
+            terminal("rocky","portable-earth-thinking-machine")
         elif "man" == mcomm:
             shell.man(prompt.split())
         elif "clear" == mcomm:
