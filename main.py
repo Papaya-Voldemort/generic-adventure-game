@@ -4,7 +4,7 @@ import random
 import shell
 
 
-name = "tung tung tung sahur".title()
+name = "tung tung tung sahur"
 fname = "brr brr patapim"
 loadBool = False
 
@@ -12,7 +12,7 @@ def terminal(user,device):
     utils.clrscreen()
     print("welcome to msh!\nfor a list of commands, type help")
     while True:
-        prompt = input(f"\[{user}@{device} {filesysloction}\]").strip()
+        prompt = input(f"[{user.lower()}@{device}] ~ ").strip()
         lprompt = prompt.split()
         mcomm = lprompt[0]
         if prompt == "help":
@@ -39,17 +39,16 @@ def playGame():
     fname = name.split(maxsplit=1)[0]
     utils.clrscreen()
     print(f"Hi {name}!")
-    utils.wait(False, 7)
+    utils.wait()
     print("You have a VERY VERY important task today.")
     utils.wait()
     print("Today you must help Rocky download GTA IV")
     utils.wait()
-    print("He plans to take all of the week of Thanksgiving off due to a *sudden* cold.")
+    print("He plans to take all of December off due to a *sudden* cold.")
     print("( ͠° ͟ʖ ͡°)")
     utils.wait()
     print("However, your client is approxamatley 16.3 light years away on Erid and the only connection you have to his computer is a remote shell.")
     utils.wait()
-    utils.wait(True)
     print("You will have to SSH into his computer and install GTA IV using the GameShore CLI")
     utils.wait()
     print("At least he plans on paying you quite well.")

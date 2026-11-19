@@ -9,7 +9,7 @@ commands = {
         'action':"clears the screen"
     },
     "exit":{
-        'action':"exits shell"
+        'action':"exit your current shell"
     }
 }
 
@@ -17,6 +17,8 @@ def help():
     for i in commands:
         commandname = i
         print(f"{i}")
-        print(f"    run the command {i} to {commands[i]['action']}.")
+        print(f"    run the command {i} to {commands[i]['action']}")
         print()
 
+def man(comm):
+    print("access and print manpage for command <comm> from respective .txt")
