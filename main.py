@@ -13,10 +13,16 @@ def terminal(user,device):
     print("welcome to msh!\nfor a list of commands, type help")
     while True:
         prompt = input(f"\[{user}@{device} {filesysloction}\]").strip()
+        lprompt = prompt.split()
+        mcomm = lprompt[0]
         if prompt == "help":
             shell.help()
-        elif "man" == prompt.split(maxsplit=1)[0]:
-            print()
+        elif "man" == mcomm:
+            shell.man(prompt.split())
+        elif "clear" == mcomm:
+            utils.clrscreen()
+        elif "exit" == mcomm:
+            return
             
 
 def playGame():

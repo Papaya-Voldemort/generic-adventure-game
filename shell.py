@@ -2,8 +2,14 @@ commands = {
     "help":{
         'action':"list avalable commands and what they do"
     },
-    "man":{
-        'action':"explain in detail what a specific command does and its syntax"
+ #   "man":{
+ #       'action':"explain in detail what a specific command does and its syntax"
+ #   },
+    "clear":{
+        'action':"clears the screen"
+    },
+    "exit":{
+        'action':"exits shell"
     }
 }
 
@@ -14,4 +20,3 @@ def help():
         print(f"    run the command {i} to {commands[i]['action']}.")
         print()
 
-help()
