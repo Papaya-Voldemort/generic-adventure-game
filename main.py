@@ -57,27 +57,27 @@ def terminal(user,device):
     print("welcome to msh!\nfor a list of commands, type help")
     while True:
         prompt = input(f"[{user.lower()}@{device}] ~ ").strip()
-        lprompt = prompt.split()
-        mcomm = lprompt[0]
-        if prompt == "help":
-            shell.help()
-        elif "ssh rocky@192.168.42.73" == prompt:
-            time.sleep(.125)
-            terminal("rocky","portable-earth-thinking-machine")
-        elif "man" == mcomm:
-            shell.man(prompt.split())
-        elif "clear" == mcomm:
-            utils.clrscreen()
-        elif "exit" == mcomm:
-            return
-        elif user == "rocky" and prompt == "sudo pacman -S gameshore":
-            pacman("gameshore")
-        elif prompt == "":
+        if prompt == "":
             print()
         else:
-            print(f"msh: command not found: {mcomm}")
-        if user == fname:
-            print("remember that rocky's ip address is 192.168.42.73")
+            lprompt = prompt.split()
+            mcomm = lprompt[0]
+            if prompt == "help":
+                shell.help()
+            elif "ssh rocky@192.168.42.73" == prompt:
+                time.sleep(.125)
+                terminal("rocky","portable-earth-thinking-machine")
+            elif "man" == mcomm:
+                shell.man(prompt.split())
+            elif "clear" == mcomm:
+                utils.clrscreen()
+            elif "exit" == mcomm:
+                return
+            elif user == "rocky" and prompt == "sudo pacman -S gameshore":
+                pacman("gameshore")
+            else:
+                print(f"msh: command not found: {mcomm}")
+        
             
 
 def playGame():
