@@ -7,9 +7,14 @@ import shell
 name = "tung tung tung sahur"
 fname = "brr brr patapim"
 loadBool = False
+pkgs = []
+
+def pacman(package):
+    print("resolving dependencies...")
+    pkgs.append("gameshare")
+
 
 def terminal(user,device):
-    utils.clrscreen()
     print("welcome to msh!\nfor a list of commands, type help")
     while True:
         prompt = input(f"[{user.lower()}@{device}] ~ ").strip()
@@ -18,6 +23,7 @@ def terminal(user,device):
         if prompt == "help":
             shell.help()
         elif "ssh rocky@192.168.42.73" == prompt:
+            time.sleep(.125)
             terminal("rocky","portable-earth-thinking-machine")
         elif "man" == mcomm:
             shell.man(prompt.split())
@@ -25,6 +31,12 @@ def terminal(user,device):
             utils.clrscreen()
         elif "exit" == mcomm:
             return
+        elif user == "rocky" and prompt == "sudo pacman -S gameshare":
+            pacman("gameshare")
+        else:
+            print(f"msh: command not found: {mcomm}")
+        if user == fname:
+            print("remember that rocky's ip address is 192.168.42.73")
             
 
 def playGame():
@@ -53,7 +65,14 @@ def playGame():
     utils.wait()
     print("You will have to SSH into his computer and install GTA IV using the GameShore CLI")
     utils.wait()
+    print("He also uses Arch Linux [btw]")
+    utils.wait()
     print("At least he plans on paying you quite well.")
+    utils.wait(True)
+    print("You will need to use his package manager (pacman) to install the GameShore CLI.")
+    utils.wait()
+    print("")
+    utils.wait(True)
     terminal(fname, "office1-desktop")
 
 
