@@ -2,7 +2,7 @@ import utils
 import time
 import random
 import shell
-
+import shutil
 
 name = "tung tung tung sahur"
 fname = "brr brr patapim"
@@ -11,7 +11,20 @@ pkgs = []
 
 def pacman(package):
     print("resolving dependencies...")
-    pkgs.append("gameshare")
+    time.sleep(.125)
+    print("looking for conflicting packages...")
+    time.sleep(.125)
+    print()
+    print(f"Packages (1) gameshore-26.12.1")
+    print()
+    print(f"Total Installed Size: {random.uniform(1.3,5.79):.2f} GiB")
+    print()
+    proceed = input(":: Proceed with installation? [Y/n]").strip().capitalize()
+    if proceed == "N":
+        return
+    else:
+        print("(1/1) checking keys in keyring")
+    pkgs.append(package)
 
 
 def terminal(user,device):
@@ -31,8 +44,8 @@ def terminal(user,device):
             utils.clrscreen()
         elif "exit" == mcomm:
             return
-        elif user == "rocky" and prompt == "sudo pacman -S gameshare":
-            pacman("gameshare")
+        elif user == "rocky" and prompt == "sudo pacman -S gameshore":
+            pacman("gameshore")
         else:
             print(f"msh: command not found: {mcomm}")
         if user == fname:
