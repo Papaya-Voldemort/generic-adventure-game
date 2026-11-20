@@ -72,6 +72,8 @@ def terminal(user,device):
             return
         elif user == "rocky" and prompt == "sudo pacman -S gameshore":
             pacman("gameshore")
+        elif prompt == "":
+            print()
         else:
             print(f"msh: command not found: {mcomm}")
         if user == fname:
@@ -108,9 +110,7 @@ def playGame():
     utils.wait()
     print("At least he plans on paying you quite well.")
     utils.wait(True)
-    print("You will need to use his package manager (pacman) to install the GameShore CLI.")
-    utils.wait()
-    print("")
+    print("You will need to use his package manager (pacman) to install the GameShore CLI.\n")
     utils.wait(True)
     terminal(fname, "office1-desktop")
 
