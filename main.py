@@ -80,40 +80,41 @@ def terminal(user,device):
         
             
 
-def playGame():
-    print("Welcome to CorpNet IT Helpdesk")
-    utils.wait()
-    name = input("What is your name?\n:").strip().title()
-    while name == "" or name.isnumeric():
-        if name.isnumeric():
-            print("Do your parents not love you?")
-            utils.wait()
-        print("Invalid name. Please try again.")
-        utils.wait(True)
+def playGame(introBool=True):
+    if introBool == True:
+        print("Welcome to CorpNet IT Helpdesk")
+        utils.wait()
         name = input("What is your name?\n:").strip().title()
-    fname = name.split(maxsplit=1)[0]
-    utils.clrscreen()
-    print(f"Hi {name}!")
-    utils.wait()
-    print("You have a VERY VERY important task today.")
-    utils.wait()
-    print("Today you must help Rocky download GTA IV")
-    utils.wait()
-    print("He plans to take all of December off due to a *sudden* cold.")
-    print("( ͠° ͟ʖ ͡°)")
-    utils.wait()
-    print("However, your client is approxamatley 16.3 light years away on Erid and the only connection you have to his computer is a remote shell.")
-    utils.wait()
-    print("You will have to SSH into his computer and install GTA IV using the GameShore CLI")
-    utils.wait()
-    print("He also uses Arch Linux [btw]")
-    utils.wait()
-    print("At least he plans on paying you quite well.")
-    utils.wait(True)
-    print("You will need to use his package manager (pacman) to install the GameShore CLI.\n")
-    utils.wait(True)
+        while name == "" or name.isnumeric():
+            if name.isnumeric():
+                print("Do your parents not love you?")
+                utils.wait()
+            print("Invalid name. Please try again.")
+            utils.wait(True)
+            name = input("What is your name?\n:").strip().title()
+        fname = name.split(maxsplit=1)[0]
+        utils.clrscreen()
+        print(f"Hi {name}!")
+        utils.wait()
+        print("You have a VERY VERY important task today.")
+        utils.wait()
+        print("Today you must help Rocky download GTA IV")
+        utils.wait()
+        print("He plans to take all of December off due to a *sudden* cold.")
+        print("( ͠° ͟ʖ ͡°)")
+        utils.wait()
+        print("However, your client is approxamatley 16.3 light years away on Erid and the only connection you have to his computer is a remote shell.")
+        utils.wait()
+        print("You will have to SSH into his computer and install GTA IV using the GameShore CLI")
+        utils.wait()
+        print("He also uses Arch Linux [btw]")
+        utils.wait()
+        print("At least he plans on paying you quite well.")
+        utils.wait(True)
+        print("You will need to use his package manager (pacman) to install the GameShore CLI.\n")
+        utils.wait(True)
     terminal(fname, "office1-desktop")
 
 
 utils.loading(loadBool)
-playGame()
+playGame(False)
