@@ -8,23 +8,49 @@ name = "tung tung tung sahur"
 fname = "brr brr patapim"
 loadBool = False
 pkgs = []
+hashtags = "###########################################"
 
 def pacman(package):
-    print("resolving dependencies...")
-    time.sleep(.125)
-    print("looking for conflicting packages...")
-    time.sleep(.125)
-    print()
-    print(f"Packages (1) gameshore-26.12.1")
-    print()
-    print(f"Total Installed Size: {random.uniform(1.3,5.79):.2f} GiB")
-    print()
-    proceed = input(":: Proceed with installation? [Y/n]").strip().capitalize()
-    if proceed == "N":
-        return
-    else:
-        print("(1/1) checking keys in keyring")
-    pkgs.append(package)
+    if not package in pkgs:   
+        print("resolving dependencies...")
+        time.sleep(.125)
+        print("looking for conflicting packages...")
+        time.sleep(.125)
+        print()
+        print(f"Packages (1) gameshore-26.12.1")
+        print()
+        print(f"Total Installed Size: {random.uniform(1.3,5.79):.2f} GiB")
+        print()
+        proceed = input(":: Proceed with installation? [Y/n]").strip().capitalize()
+        if proceed == "N":
+            return
+        else:
+            print(f"(1/1) checking keys in keyring      [{hashtags}] 100%")
+            time.sleep(.125)
+            print(f"(1/1) checking package integrity        [{hashtags}] 100%")
+            time.sleep(.125)
+            print(f"(1/1) loading package files     [{hashtags}] 100%")
+            time.sleep(.125)
+            print(f"(1/1) checking for file conflicts       [{hashtags}] 100%")
+            time.sleep(.125)
+            print(f"(1/1) checking avalable disk space      [{hashtags}] 100%")
+            time.sleep(.125)
+            print(":: Processing package changes")
+            time.sleep(.25)
+            print(f"(1/1) installing {package}")
+            time.sleep(.125)
+            print(":: Running post-transition hooks...")
+            time.sleep(.125)
+            print("(1/4) Arming ConditionNeedsUpdate...")
+            time.sleep(.125)
+            print("(2/4) Refreshing PackageKit...")
+            time.sleep(.125)
+            print("(3/4) Updating icon theme caches...")
+            time.sleep(.125)
+            print("(4/4) Updating the desktop file MIME type cache...")
+            time.sleep(.125)
+            time.sleep(.125)
+            pkgs.append(package)
 
 
 def terminal(user,device):
